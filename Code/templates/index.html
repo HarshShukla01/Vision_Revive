@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Revive - AI-Powered Video Dehazing</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(0, 0, 0, 0.9)), url('/static/ai-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      overflow-x: hidden;
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 3rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+      color: #00ffe5;
+      text-shadow: 0 0 10px #00ffe5;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      color: #ccc;
+    }
+    .upload-container {
+      background: rgba(255,255,255,0.05);
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 229, 0.2);
+      backdrop-filter: blur(6px);
+      animation: slideUp 1s ease-in;
+    }
+    input[type=file], input[type=submit] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      font-family: 'Quicksand', sans-serif;
+    }
+    input[type=submit] {
+      background: #00b894;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    input[type=submit]:hover {
+      background: #019874;
+    }
+    video {
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    a {
+      color: #00ffe5;
+      text-decoration: none;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>VISION REVIVE</h1>
+    <p>Empowering clarity in crisis. This AI-powered tool helps in smoke and haze removal from videos, aiding fire rescue teams and autonomous vehicles. Upload a hazy video and experience the clarity of Vision Revive.</p>
+  </div>
+
+  <div class="upload-container">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="video">Upload Hazy Video:</label>
+      <input type="file" name="video" id="video" accept="video/*" required>
+      <input type="submit" value="Dehaze Now">
+    </form>
+  </div>
+
+  {% if output_video %}
+  <div class="upload-container">
+    <h2 style="text-align:center">Dehazed Output:</h2>
+    <video controls width="100%">
+      <source src="{{ url_for('static', filename='outputs/' + output_video) }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p style="text-align:center; margin-top:1rem"><a href="{{ url_for('static', filename='outputs/' + output_video) }}" download>⬇️ Download Output</a></p>
+  </div>
+  {% endif %}
+
+  <div class="footer">
+    &copy; 2025 Vision Revive. Built with 💡, code & AI to support humanity.
+  </div>
+</body>
+</html>
