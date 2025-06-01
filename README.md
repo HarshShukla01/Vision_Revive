@@ -4,8 +4,6 @@
 
 ---
 
-![Banner](https://via.placeholder.com/1200x300.png?text=VISION+REVIVE+-+AI+Dehazing+%26+Desmoking+Solution)
-
 ## 🔍 Overview
 
 **Vision Revive** is a web-based application that aims to **restore visibility** in images and videos affected by smoke or haze. Originally conceptualized for **rescue operations in fire-prone indoor environments** and for **road safety in hazy weather for autonomous vehicles**, the project explores both traditional image processing and modern AI-driven methods to enhance visual clarity.
