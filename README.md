@@ -95,24 +95,35 @@ VisionRevive/
     python app.py
 4. **Open your browser at** ```http://localhost:5000```
 
-🧠 Future Scope
-✅ Fixing and deploying AOD-Net or other pretrained models (e.g., DehazeFormer)
 
-📹 Smooth video dehazing with hardware acceleration
+## 🧠 Future Scope
 
-🔗 Cloud deployment using Streamlit or Flask + Docker
+- ✅ Fixing and deploying AOD-Net or other pretrained models (e.g., DehazeFormer)
+- 📹 Smooth video dehazing with hardware acceleration
+- 🔗 Cloud deployment using Streamlit or Flask + Docker
+- 🧪 Further optimization for real-time applications
 
-🧪 Further optimization for real-time applications
+---
 
-🙌 Acknowledgements
-Our Professors & Project Guides
+## 🙌 Acknowledgements
 
-OpenCV, PyTorch, and related open-source communities
+- Our Professors & Project Guides  
+- OpenCV, PyTorch, and related open-source communities  
+- GitHub Copilot and ChatGPT for collaborative guidance  
 
-GitHub Copilot and ChatGPT for collaborative guidance
+---
 
-✨ Final Note
-While Vision Revive was not 100% functional, it stood as a symbol of our learning, exploration, and perseverance. We are proud to have completed the journey and shared our vision for a safer, clearer, and smarter world.
+## ✨ Final Note
 
-“Not every working prototype is a success, but every effort that teaches something is.”
+While Vision Revive was not 100% functional, it stood as a symbol of our **learning, exploration, and perseverance**. We are proud to have completed the journey and shared our vision for a safer, clearer, and smarter world.
+
+> _“Not every working prototype is a success, but every effort that teaches something is.”_
+
+---
+
+## 📫 Connect With Us
+
+Feel free to reach out if you wish to collaborate or improve upon this project!
+
+*Team Vision Revive | BTech CSE | 2025 Batch*
 
